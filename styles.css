@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  padding: 2rem;
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, #cffafe, #22d3ee);
+  display: flex;
+  flex-direction: column;
+}
+
+.header-img {
+  display: flex;
+  width: 100%;
+  max-width: 400px; /* Adjusted from 600px to 400px */
+  margin-inline: auto;
+  filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.2));
+}
+
+
+.container {
+  flex: 1;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.image-1,
+.image-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-1 {
+  width: 225px;
+}
+
+.image-2 {
+  width: 250px;
+}
+
+.image-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px; /* Adjusted from 250px to 300px */
+}
+
+.image-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 270px; /* Adjusted from 250px to 300px */
+}
+
+.btn {
+  position: absolute;
+  top: calc(100% - 5rem);
+  min-width: 120px;
+  padding: 0.75rem 1rem;
+  font-size: 1.25rem;
+  outline: none;
+  border: none;
+  background-color: #f8fafc;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #e2e8f0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-yes {
+  left: 50%;
+  transform: translateX(calc(-100% - 1rem));
+  z-index: 1;
+}
+
+.btn-no {
+  left: calc(50% + 1rem);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #f8fafc;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.apology-message {
+  background-color: #fff8f0; /* Soft peach */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  text-align: center;
+}
+
+.apology-message h1 {
+  color: #ff6b6b; /* Soft red */
+}
+
+.apology-message p {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+textarea {
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+#submitResponse {
+  background-color: #4caf50; /* Green, for positivity */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#submitResponse:hover {
+  background-color: #45a049;
+}
